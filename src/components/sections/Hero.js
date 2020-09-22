@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+/* eslint-disable jsx-a11y/iframe-has-title */
+import React from 'react';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
 import ButtonGroup from '../elements/ButtonGroup';
 import Button from '../elements/Button';
-import Image from '../elements/Image';
-import Modal from '../elements/Modal';
 
 const propTypes = {
   ...SectionProps.types
@@ -25,17 +24,17 @@ const Hero = ({
   ...props
 }) => {
 
-  const [videoModalActive, setVideomodalactive] = useState(false);
+  // const [videoModalActive, setVideomodalactive] = useState(false);
 
-  const openModal = (e) => {
-    e.preventDefault();
-    setVideomodalactive(true);
-  }
+  // const openModal = (e) => {
+  //   e.preventDefault();
+  //   setVideomodalactive(true);
+  // }
 
-  const closeModal = (e) => {
-    e.preventDefault();
-    setVideomodalactive(false);
-  }   
+  // const closeModal = (e) => {
+  //   e.preventDefault();
+  //   setVideomodalactive(false);
+  // }   
 
   const outerClasses = classNames(
     'hero section center-content',
@@ -61,27 +60,31 @@ const Hero = ({
         <div className={innerClasses}>
           <div className="hero-content">
             <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
-              Landing template for <span className="text-color-primary">startups</span>
+              Tanzania Landscape Restoration Organization <span className="text-color-primary">TaLRO</span>
             </h1>
-            <div className="container-xs">
+            <div className="container-xl">
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.
-                </p>
+              Tanzania Landscapes Restoration Organization (TaLRO) was established in year 2019 by graduate students from the University of Dar es Salaam - Tanzania to initiate, support and promotes landscape restoration activities in the country and make sure degraded landscapes regain their properties and functionalities.                 </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
-                  <Button tag="a" color="primary" wideMobile href="https://cruip.com/">
-                    Get started
+                  <Button tag="a" color="primary" wideMobile href="#">
+                  Our work
                     </Button>
-                  <Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
-                    View on Github
+                  <Button tag="a" color="dark" wideMobile href="#">
+                    Read more...
                     </Button>
                 </ButtonGroup>
               </div>
             </div>
           </div>
           <div className="hero-figure reveal-from-bottom illustration-element-01" data-reveal-value="20px" data-reveal-delay="800">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/wzFNX9dODNs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+          </div>
+
+          {/* <div className="hero-figure reveal-from-bottom illustration-element-01" data-reveal-value="20px" data-reveal-delay="800">
             <a
-              data-video="https://player.vimeo.com/video/174002812"
+              data-video="https://youtu.be/wzFNX9dODNs"
               href="#0"
               aria-controls="video-modal"
               onClick={openModal}
@@ -93,13 +96,14 @@ const Hero = ({
                 width={896}
                 height={504} />
             </a>
-          </div>
-          <Modal
+          </div> */}
+          {/* <Modal
             id="video-modal"
             show={videoModalActive}
             handleClose={closeModal}
-            video="https://player.vimeo.com/video/174002812"
-            videoTag="iframe" />
+            video="https://youtu.be/wzFNX9dODNs"
+            videoTag="iframe" /> */}
+
         </div>
       </div>
     </section>
